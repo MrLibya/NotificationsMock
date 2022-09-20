@@ -45,7 +45,7 @@ const HomeScreen = () => {
         <SafeAreaView style={styles.container}>
             <FlatList
                 data={notifications}
-                keyExtractor={(_, index) => index.toString()}
+                keyExtractor={item => item.id.toString()}
                 renderItem={renderItem}
                 ItemSeparatorComponent={<View style={styles.divider} />}
                 ListHeaderComponent={renderHeader}
